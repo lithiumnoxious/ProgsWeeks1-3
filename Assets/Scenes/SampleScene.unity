@@ -600,6 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  areYouOkay: 0
 --- !u!212 &1166644494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -789,6 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
+  areYouOkay: 0
 --- !u!212 &1867562154
 SpriteRenderer:
   m_ObjectHideFlags: 0

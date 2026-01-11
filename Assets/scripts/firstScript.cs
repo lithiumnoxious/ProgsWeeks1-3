@@ -3,12 +3,16 @@ using UnityEngine;
 public class firstScript : MonoBehaviour
 {
     public float speed = 0.01f;
+    public bool areYouOkay = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //speed = Random.Range(0.01f, 0.5f);
-       // transform.position = (vector2) transform.position + Random.insideUnitCircle * 2;
-        transform.position = Random.insideUnitCircle * Random.Range(0.1f, 5f);
+        // transform.position = (vector2) transform.position + Random.insideUnitCircle * 2;
+        if (areYouOkay == true)
+        {
+            transform.position = Random.insideUnitCircle * Random.Range(0.1f, 5f);
+        }
     }
 
     // Update is called once per frame
