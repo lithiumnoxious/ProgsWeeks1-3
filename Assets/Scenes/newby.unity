@@ -216,9 +216,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 758389758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00407ae8a345f440a62654650d274a8, type: 3}
+  m_Script: {fileID: 11500000, guid: ace2be56bd144524ead54b84506ec657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  areYouOkay: 0
 --- !u!1 &977809017
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +254,48 @@ MonoBehaviour:
   start: {fileID: 1667855811}
   end: {fileID: 758389760}
   t: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.04166794
+      value: -0.06668091
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.1632953
+      value: 0.9353086
+      inSlope: 1.0198432
+      outSlope: 1.0198432
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.45590827
+      value: 0.24298967
+      inSlope: -3.2335076
+      outSlope: -3.2335076
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0791473
+      value: 0.8857498
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!212 &977809019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -332,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667855811}
   - component: {fileID: 1667855810}
-  - component: {fileID: 1667855812}
+  - component: {fileID: 1667855813}
   m_Layer: 0
   m_Name: start
   m_TagString: Untagged
@@ -404,13 +448,13 @@ Transform:
   m_GameObject: {fileID: 1667855809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.2992, y: 2.2992, z: 0}
+  m_LocalScale: {x: 2.4017, y: 2.4017, z: 2.4017}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1667855812
+--- !u!114 &1667855813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -419,11 +463,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667855809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ace2be56bd144524ead54b84506ec657, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dd4dd454c0ff874682f48ea612650ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  areYouOkay: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9958191
+      value: 1.0999985
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 0
 --- !u!1 &1721441913
 GameObject:
   m_ObjectHideFlags: 0
