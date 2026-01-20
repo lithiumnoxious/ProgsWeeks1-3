@@ -304,6 +304,8 @@ GameObject:
   - component: {fileID: 959681669}
   - component: {fileID: 959681668}
   - component: {fileID: 959681670}
+  - component: {fileID: 959681671}
+  - component: {fileID: 959681672}
   m_Layer: 0
   m_Name: duck_yellow_0
   m_TagString: Untagged
@@ -398,6 +400,34 @@ MonoBehaviour:
   mysprite: {fileID: 21300000, guid: eb99a2335dce5e04b97b29675ddef408, type: 3}
   Barrels: []
   randomNum: 0
+--- !u!114 &959681671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959681666}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ebd6ee7212fa547a697f9a9e7d486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+--- !u!114 &959681672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959681666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e8e115fb36ef84faa70a05a03f7728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rations: {fileID: 959681671}
+  mouseIsOver: 0
+  dis: 1
 --- !u!1 &1233024392
 GameObject:
   m_ObjectHideFlags: 0

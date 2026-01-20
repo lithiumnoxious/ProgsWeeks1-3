@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class rollover : MonoBehaviour
 {
+    public rationsZcomp rations;
     public bool mouseIsOver = false;
     public float dis = 1;
     
@@ -28,5 +29,6 @@ public class rollover : MonoBehaviour
             mouseIsOver = false;
         }
         
+        rations.speed = 100;
     }
 }
