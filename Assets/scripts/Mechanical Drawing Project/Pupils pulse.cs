@@ -15,7 +15,7 @@ public class Pupilspulse : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 1)s
+        if (time > 1)
         {
             time = 0;
         }
