@@ -7,12 +7,6 @@ public class poi : MonoBehaviour
     public float posY;
     public float speed = 1;
 
-    //boundries
-    public float minX = -9;
-    public float maxX = 9;
-    public float minY = -4;
-    public float maxY = 4;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
