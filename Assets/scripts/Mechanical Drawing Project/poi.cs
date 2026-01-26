@@ -5,7 +5,13 @@ public class poi : MonoBehaviour
 {
     public float posX;
     public float posY;
-    public float speed = 30;
+    public float speed = 1;
+
+    //boundries
+    public float minX = -9;
+    public float maxX = 9;
+    public float minY = -4;
+    public float maxY = 4;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,19 +28,10 @@ public class poi : MonoBehaviour
         //Moves the X position
         if (mousePos.x > posX)
         {
-            //Vector2 newPos = transform.position;
-            //newPos.x += speed * Time.deltaTime;
-            //transform.position = newPos;
-            //posX = newPos.x;
-
-            for(int i=0; i<10; i++){
-                Vector2 newPoses = transform.position;
-                newPoses.x += speed * Time.deltaTime;
-                transform.position = newPoses;
-                posX = newPoses.x;
-
-            }
-            
+            Vector2 newPos = transform.position;
+            newPos.x += speed * Time.deltaTime;
+            transform.position = newPos;
+            posX = newPos.x;
         }
         else
         {
@@ -43,7 +40,6 @@ public class poi : MonoBehaviour
             transform.position = newPos;
             posX = newPos.x;
         }
-
         if (mousePos.y > posY)
         {
             Vector2 newPos = transform.position;
@@ -59,6 +55,21 @@ public class poi : MonoBehaviour
             posY = newPos.y;
         }
 
-
+        if (transform.position.x >= 9)
+        {
+            transform.position = new Vector2(9, posY);
+        }
+        if (transform.position.x <= -9)
+        {
+            transform.position = new Vector2(-9, posY);
+        }
+        if (transform.position.y >= 4)
+        {
+            transform.position = new Vector2(posX, 4);
+        }
+        if (transform.position.y <= -4)
+        {
+            transform.position = new Vector2(posX, -4);
+        }
     }
 }
