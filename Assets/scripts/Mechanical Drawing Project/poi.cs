@@ -22,13 +22,22 @@ public class poi : MonoBehaviour
         //Moves the X position
         if (mousePos.x > posX)
         {
-            Vector2 newPos = transform.position;
-            newPos.x += speed * Time.deltaTime;
-            transform.position = newPos;
-            posX = newPos.x;
+            //Vector2 newPos = transform.position;
+            //newPos.x += speed * Time.deltaTime;
+            //transform.position = newPos;
+            //posX = newPos.x;
+
+            for(int i=0; i<10; i++){
+                Vector2 newPoses = transform.position;
+                newPoses.x += speed * Time.deltaTime;
+                transform.position = newPoses;
+                posX = newPoses.x;
+
+            }
+            
         }
         else
-            {
+        {
             Vector2 newPos = transform.position;
             newPos.x -= speed * Time.deltaTime;
             transform.position = newPos;
