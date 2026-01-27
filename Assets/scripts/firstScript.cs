@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class firstScript : MonoBehaviour
 {
-    public float speed = 0.1f;
+    public float speed = 10f;
+    public SpriteRenderer body;
     public bool areYouOkay = false;
     Vector2 bottomleft;
     Vector2 topRight;
@@ -18,7 +19,7 @@ public class firstScript : MonoBehaviour
         // transform.position = (vector2) transform.position + Random.insideUnitCircle * 2;
         if (areYouOkay == true)
         {
-            transform.position = Random.insideUnitCircle * Random.Range(0.1f, 5f);
+            transform.position = Random.insideUnitCircle * Random.Range(1f, 5f);
         }
     }
 
