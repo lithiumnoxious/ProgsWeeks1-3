@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +10,8 @@ public class tankspawn : MonoBehaviour
     public GameObject spawnedTank;
     public firstScript tankscript;
     public SpriteRenderer tanksr;
+    public List <GameObject> tanks;
+    public Transform barrel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +40,13 @@ public class tankspawn : MonoBehaviour
             HowManyAreThere++;
             tankscript.speed = HowManyAreThere;
             tankscript.body.color = Random.ColorHSV();
+
+            tanks.Add(spawnedTank);
+            for (int i = 0; i < tanks.Count; i++)
+            {
+                firstScript ts = tanks[i].GetComponent<firstScript>();
+                ts.speed = HowManyAreThere;
+            }
         }
 
         if (Mouse.current.rightButton.wasPressedThisFrame)
@@ -43,5 +54,15 @@ public class tankspawn : MonoBehaviour
             //appears as child of transform and set at 0,0
             Instantiate(tankPrefab, transform);
         }
+
+        for(int i = 0; i < tanks.Count; i++)
+        {
+            float distance = Vector2.Distance(tanks[i].transform.position, barrel.position);
+            if(distance < 0.5f)
+            {
+                Debug.Log("explode" + i);
+            }
+        }
+
     }
 }

@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 834547402}
   - component: {fileID: 834547401}
   m_Layer: 0
-  m_Name: Square
+  m_Name: barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,6 +512,7 @@ MonoBehaviour:
   spawnedTank: {fileID: 0}
   tankscript: {fileID: 0}
   tanksr: {fileID: 0}
+  tanks: []
 --- !u!4 &1914460263
 Transform:
   m_ObjectHideFlags: 0
