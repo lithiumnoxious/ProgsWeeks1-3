@@ -12,6 +12,7 @@ public class tankspawn : MonoBehaviour
     public SpriteRenderer tanksr;
     public List <GameObject> tanks;
     public Transform barrel;
+    public GameObject Duckie;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,6 +43,10 @@ public class tankspawn : MonoBehaviour
             tankscript.body.color = Random.ColorHSV();
 
             tanks.Add(spawnedTank);
+
+            Instantiate(Duckie, Random.insideUnitCircle * 3, Quaternion.identity);
+
+
             for (int i = 0; i < tanks.Count; i++)
             {
                 firstScript ts = tanks[i].GetComponent<firstScript>();
@@ -52,15 +57,24 @@ public class tankspawn : MonoBehaviour
         if (Mouse.current.rightButton.wasPressedThisFrame)
         {
             //appears as child of transform and set at 0,0
-            Instantiate(tankPrefab, transform);
+            // Instantiate(tankPrefab, transform);
+
+            tanks.Remove(spawnedTank);
+            Destroy(spawnedTank);
         }
 
-        for(int i = 0; i < tanks.Count; i++)
+        for(int i = tanks.Count - 1; i >= 0;  i--)
         {
             float distance = Vector2.Distance(tanks[i].transform.position, barrel.position);
             if(distance < 0.5f)
             {
                 Debug.Log("explode" + i);
+                GameObject tank = tanks[i];
+
+                //either works
+                tanks.Remove(tank);
+                //tanks.RemoveAt(1);
+                Destroy(tank);
             }
         }
 
